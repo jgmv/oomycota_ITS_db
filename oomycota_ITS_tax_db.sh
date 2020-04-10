@@ -43,7 +43,7 @@ parse_taxids.py .temp2 -o .temp3
 grep ">" oomycota.fasta > .temp4
 sed -i 's/>//g' .temp4
 cut -f1 -d';' --complement .temp3 > .temp5
-paste --delimiters=';' .temp4 .temp5 > oomycota.tax
+paste --delimiters='\t' .temp4 .temp5 > oomycota.tax
 
 rm -rf .temp*
 
